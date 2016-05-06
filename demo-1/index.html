@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Module 12: Demo 1</title>
+
+		<!-- Libraries -->
+		<script src="https://code.jquery.com/jquery.min.js"></script>
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<script src="http://d3js.org/d3.v3.min.js"></script>
+		<script src="http://d3js.org/colorbrewer.v1.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.20/topojson.js"></script>
+		<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+		<!-- Custom files -->
+		<link rel="stylesheet" href="css/main.css"/>
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css"
+		<!-- your script files -->
+		<script src="js/Map.js"></script>
+		<script src="js/Histogram.js"></script>
+		<script src="js/main.js"></script>
+	</head>
+	<body class="container">
+		<h1>Welcome to Module 12 Demo 1</h1>
+		<p>Overview -- something about scales</p>
+		<div class="row">
+			<h3 class="col-xs-4">Scale Type</h3>
+			<h3 id="num-colors" class="col-xs-4">Number of Colors: 4</h3>
+			<h3 id="num-colors" class="col-xs-4">Color Variable</h3>
+		</div>
+		<div class="row">
+			<div class="col-xs-4">
+				<div class="btn-group" data-toggle="buttons">
+				  <label class="btn btn-primary active">
+				    <input value="quantize" class="scale" type="radio" name="options" autocomplete="off" checked>Quantize
+				  </label>
+				  <label class="btn btn-primary">
+				    <input value="quantile" type="radio" class="scale" name="options" autocomplete="off">Quantile
+				  </label>
+				</div>
+			</div>
+			<div class="col-xs-4">
+				<div id="slider"></div>
+			</div>
+			<div class="row">
+				<div class="col-xs-4">
+					<div class="btn-group" data-toggle="buttons">
+						<label class="btn btn-primary active">
+							<input value="latitude" class="orientation" type="radio" name="options" autocomplete="off" checked>Latitude
+						</label>
+						<label class="btn btn-primary">
+							<input value="longitude" type="radio" class="orientation" name="options" autocomplete="off">Longitude
+						</label>
+					</div>
+				</div>
+		</div>
+
+		</div>
+		<div id="vis"></div>
+		<div id="color-picker">
+			<p>click to change pallette</p>
+		</div>
+	</body>
+</html>
