@@ -1,17 +1,7 @@
-// Histogram Code
-var drawHistogram, xScale, yScale, qScale, data, values;
-$(function() {
-  // Margin: how much space to put in the SVG for axes/titles
-  var margin = {
-    left:70,
-    bottom:100,
-    top:50,
-    right:50,
-  };
+// Histogram adapted from https://bl.ocks.org/mbostock/3048450
 
-  // Height/width of the drawing area for data symbols
-  var height = 350 - margin.bottom - margin.top;
-  var width = 900 - margin.left - margin.right;
+// On load, append chart element
+$(function() {
 
   // Select SVG to work with, setting width and height (the vis <div> is defined in the index.html file)
   var svg = d3.select('#vis')
@@ -45,37 +35,6 @@ $(function() {
                      .attr('transform', 'translate(' + (margin.left - 40) + ',' + (margin.top + height/2) + ') rotate(-90)')
                      .attr('class', 'title')
 
-  // Add selection swatches
-
-
-  // Write a function for setting scales.
-  var setScales = function() {
-
-    // Number of scale breaks
-    var numBreaks = settings.colorBreaks;
-    var colorClass = settings.colorClass;
-    // Define an ordinal xScale using rangeBands
-    var min = d3.min(values);
-    var max = d3.max(values);
-    xScale  = d3.scale.linear()
-                .domain([min, max])
-                .range([0, width]);
-
-    // Define a quantile scale
-    var range = colorbrewer[colorClass][numBreaks]
-    var domain = values;
-    quantileScale = d3.scale.quantile().domain(domain).range(range);
-
-    // d3.range(d3.min(values), d3.max(values), numBreaks)
-    var step = Math.floor((max - min)/numBreaks);
-    var domain = d3.range(min, max, step);
-    quantizeScale = d3.scale.quantize().domain(domain).range(range);
-
-    // Define the yScale: remember to draw from top to bottom!
-    yScale = d3.scale.linear()
-      .domain([0, d3.max(data, function(d) { return d.y; })])
-      .range([height, 0]);
-  }
 
   // Function for setting axes
   var setAxes = function() {
@@ -101,29 +60,10 @@ $(function() {
     yAxisText.text('Count')
   }
 
-  // Make random data
-  var makeData = function(shape) {
-    // Set values as longitude
-    values = topojson.feature(shape, shape.objects.counties).features.map(function(d){
-      var index = settings.orientation == 'latitude' ? 0 : 1;
-      return(pathGen.centroid(d)[index])
-    })
 
-    // Histogram layout
-    var histogram = d3.layout.histogram()
-                .bins(30);
-
-    data = histogram(values);
-  }
 
   // Store the data-join in a function: make sure to set the scales and update the axes in your function.
-  drawHistogram = function(settings) {
-    // Generate data
-
-    makeData(settings.data);
-    // Set scales
-    setScales()
-
+  drawHistogram = function() {
     // Set axes
     setAxes()
 
