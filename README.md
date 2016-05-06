@@ -28,6 +28,7 @@ Here are a few resources to get you started making maps:
 - [D3 Map Projections](https://github.com/mbostock/d3/wiki/Geo-Projections) _(D3 Wiki)_
 - [Converting from shapefiles to geojson](http://vallandingham.me/shapefile_to_geojson.html) _(Vallandingham)_
 - [Shapefiles](https://doc.arcgis.com/en/arcgis-online/reference/shapefiles.htm) _(ArcGIS Docs)_
+
 ## What _is_ a map?
 It's important to consider the HTML/SVG elements that constitute different maps in order to build them. Depending on your approach, the elements that you use to represent geographies and spatial data may be quite different. For example, using the [Leaflet.js](http://leafletjs.com/) library, you'll stitch together **map tiles** (small `<img>` elements of geographies) to display your map:
 
