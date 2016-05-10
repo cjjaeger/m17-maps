@@ -102,4 +102,7 @@ $(function() {
 			update()
 		}
 	});
+
+	// Add button hover
+	$('label.scale-label').tooltip();
 });

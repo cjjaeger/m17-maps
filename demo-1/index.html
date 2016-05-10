@@ -25,7 +25,7 @@
 	</head>
 	<body class="container">
 		<h1>Welcome to Module 12 Demo 1</h1>
-		<p>The purpose of this demo is to demonstrate the consequence of choosing different breaks for color scales on maps. You can choose to set equal breaks using the <code>quantile</code> scale, or breaks such that there is an equal number of counties of each color (<code>quartile</code>)</p>
+		<p>The purpose of this demo is to demonstrate the consequence of choosing different breaks for color scales on maps. You can choose to set an equal distance between bins using the <code>quantize</code> scale, or breaks such that there is an equal number of observations per bin using the (<code>quantile</code>)</p>
 		<div class="row">
 			<h3 class="col-xs-4">Scale Type</h3>
 			<h3 id="num-colors" class="col-xs-4">Number of Colors: 4</h3>
@@ -34,10 +34,10 @@
 		<div class="row">
 			<div class="col-xs-4">
 				<div class="btn-group" data-toggle="buttons">
-				  <label class="btn btn-primary active">
+				  <label title="Equal spacing between bins" class="btn btn-primary active scale-label">
 				    <input value="quantize" class="scale" type="radio" name="options" autocomplete="off" checked>Quantize
 				  </label>
-				  <label class="btn btn-primary">
+				  <label title="Equal number of observations per bin" class="btn btn-primary scale-label">
 				    <input value="quantile" type="radio" class="scale" name="options" autocomplete="off">Quantile
 				  </label>
 				</div>
