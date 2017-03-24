@@ -1,22 +1,8 @@
-# Module 11: Maps
+# Maps
 
-## Overview
 In this module, we'll explore different approaches for building maps on the web, including [Leaflet.js](http://leafletjs.com/), and (of course) [D3.js](https://d3js.org/).
 
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Contents**
-
-- [Resources](#resources)
-- [Leaflet.js](#leafletjs)
-- [D3 Maps](#d3-maps)
-  - [Map projections](#map-projections)
-  - [Map Data](#map-data)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-## Resources
-Here are a few resources to get you started making maps:
+Helpful links:
 
 - [Leaflet.js](http://leafletjs.com/) _(Leaflet Docs)_
 - [Plotly.js Maps](https://plot.ly/javascript/#maps) _(Plotly Docs)_
