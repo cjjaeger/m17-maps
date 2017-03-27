@@ -51,7 +51,7 @@ var marker = L.marker([51.5, -0.09]).addTo(map);
 
 Note, you may want to create a _layer_ that holds your markers and add your markers to your _layer_ -- this will facilitate easily adding and removing groups of markers.
 
-For practice working with the Leaflet.js library, see [exercise-1](exercise-1).
+For practice working with the Leaflet.js library, see [exercise-1](http://github.com/info474-s17/m17-maps/tree/master/exercise-1).
 
 
 ## D3 Maps
