@@ -1,22 +1,8 @@
-# Module 11: Maps
+# Maps
 
-## Overview
 In this module, we'll explore different approaches for building maps on the web, including [Leaflet.js](http://leafletjs.com/), and (of course) [D3.js](https://d3js.org/).
 
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Contents**
-
-- [Resources](#resources)
-- [Leaflet.js](#leafletjs)
-- [D3 Maps](#d3-maps)
-  - [Map projections](#map-projections)
-  - [Map Data](#map-data)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-## Resources
-Here are a few resources to get you started making maps:
+Helpful links:
 
 - [Leaflet.js](http://leafletjs.com/) _(Leaflet Docs)_
 - [Plotly.js Maps](https://plot.ly/javascript/#maps) _(Plotly Docs)_
@@ -65,7 +51,7 @@ var marker = L.marker([51.5, -0.09]).addTo(map);
 
 Note, you may want to create a _layer_ that holds your markers and add your markers to your _layer_ -- this will facilitate easily adding and removing groups of markers.
 
-For practice working with the Leaflet.js library, see [exercise-1](exercise-1).
+For practice working with the Leaflet.js library, see [exercise-1](http://github.com/info474-s17/m17-maps/tree/master/exercise-1).
 
 
 ## D3 Maps
