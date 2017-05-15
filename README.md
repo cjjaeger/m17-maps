@@ -18,11 +18,11 @@ Helpful links:
 ## What _is_ a map?
 It's important to consider the HTML/SVG elements that constitute different maps in order to build them. Depending on your approach, the elements that you use to represent geographies and spatial data may be quite different. For example, using the [Leaflet.js](http://leafletjs.com/) library, you'll stitch together **map tiles** (small `<img>` elements of geographies) to display your map:
 
-![screenshot of maptiles](imgs/map-tiles.png)
+![screenshot of maptiles](m17-imgs/map-tiles.png)
 
 However, if you use D3.js to build your map, `<path>` elements are used to display geographies:
 
-![screenshot of map path element](imgs/map-paths.png)
+![screenshot of map path element](m17-imgs/map-paths.png)
 
 As you can imagine, the approaches for constructing these maps are quite different, and come with their own affordances and challenges.
 
@@ -60,7 +60,7 @@ As with other chart types, making maps in D3 is both more challenging and more c
 ### Map projections
 Map projections provide a way to translate from a 3D space to a 2D space. Through this translation, a map's accuracy is jeopardized, and tradeoffs are made regarding the preservation of _area_, _angle_, _distance_, and other properties. I find [this visual](http://bl.ocks.org/mbostock/5731632) helpful in wrapping my mind around the role of map projections:
 
-![gif of unfolding a 3D globe into 2D space](imgs/projection.gif)
+![gif of unfolding a 3D globe into 2D space](m17-imgs/projection.gif)
 
 However, this **is not** a lesson about which map projection to choose. If you'd like to explore the different [D3 Projections](https://github.com/mbostock/d3/wiki/Geo-Projections), I suggest playing around with this [interactive bl.ock](http://bl.ocks.org/mbostock/3711652). The point here is to underscore that, when building the geogrphaies of your map, you'll be using a specific projection. We'll discuss this more below, but you may be using a file that _already has a projection_, or you may have to specify your map projection using this syntax:
 
